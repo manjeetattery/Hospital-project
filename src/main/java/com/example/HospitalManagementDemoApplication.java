@@ -14,5 +14,6 @@ public class HospitalManagementDemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HospitalManagementDemoApplication.class, args);
+		System.out.println("start project: ");
 	}
 }

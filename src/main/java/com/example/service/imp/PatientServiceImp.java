@@ -102,7 +102,7 @@ public class PatientServiceImp implements PatientService {
 				.orElseThrow(() -> new UserNotFoundException("doctor not found with ID: " + id));
 		PatientDTO1 patientDto1 = mapper.map(patient, PatientDTO1.class);
 		patientRepo.deleteDoctorId(patientDto1.getId());
-		patientRepo.deleteByPatientId(patientDto1.getId());
+		patientRepo.deleteById(patientDto1.getId());
 		return patientDto1;
 	}
 

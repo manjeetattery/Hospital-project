@@ -25,8 +25,12 @@ public interface PatientRepo extends CrudRepository<Patient, Long> {
 	@Query(value = "DELETE doctor_patient_data FROM doctor_patient_data WHERE doctor_patient_data.patient_id=:pId", nativeQuery = true)
 	void deleteDoctorId(@Param("pId") Long id);
 
-	@Modifying
-	@Transactional
-	@Query(value = "DELETE patient FROM patient WHERE patient.id=:pId", nativeQuery = true)
-	void deleteByPatientId(@Param("pId") Long id);
+	/*
+	 * @Modifying
+	 * 
+	 * @Transactional
+	 * 
+	 * @Query(value = "DELETE patient FROM patient WHERE patient.id=:pId",
+	 * nativeQuery = true) void deleteByPatientId(@Param("pId") Long id);
+	 */
 }
